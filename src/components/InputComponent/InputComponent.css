@@ -1,0 +1,36 @@
+.input-container{
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.input-text textarea{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    background-color: transparent;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid gray;
+    color: white;
+}
+.input-text button{
+    padding: 8px 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 20px auto;
+    width: 90%;
+    color: white;
+    font-weight: 600;
+}
+.input-text button:hover{
+    color: rgb(45 42 49);
+    background-color: white;
+}
+@media screen and (max-width: 302px){
+    .input-container{
+        margin: 0px;
+    }
+}
