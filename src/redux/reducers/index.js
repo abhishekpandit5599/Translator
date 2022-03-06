@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
     apiCalls : apiCalls,
-    apiCallsGetLang : apiCallsGetLang 
+    apiCallsGetLang : apiCallsGetLang,
 })
 
 export default rootReducer;

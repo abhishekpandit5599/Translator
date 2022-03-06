@@ -26,3 +26,12 @@ export const apiCallGetLang = () => {
     });
   };
 };
+
+export const swapText = (inputText) => {
+  return async(dispatch) => {
+    dispatch({
+      type: "SWAP-TEXT",
+      inputText: inputText,
+    });
+  };
+};

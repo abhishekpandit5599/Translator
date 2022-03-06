@@ -1,6 +1,5 @@
 const intialState = {
-  translationsText:'',
-  counter:0
+  translationsText:''
 };
 
 const apiCalls = (state = intialState, action) => {

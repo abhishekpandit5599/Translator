@@ -7,8 +7,12 @@ import "./Home.css";
 
 function Home() {
   const dispatch = useDispatch();
+  const myState = useSelector((state) => state.apiCalls);
+
+
   const [langSelectInput, setLangSelectInput] = useState({ value: "en" });
   const [langSelectOut, setLangSelectOut] = useState({ value: "hi" });
+  const [inputText ,setInputText] = useState('')
 
   const getLang = useSelector((state) => state.apiCallsGetLang).translation;
 
@@ -17,11 +21,19 @@ function Home() {
     // eslint-disable-next-line
   }, []);
 
+  // Change State of Input text or set Text
+  const setText=(text)=>{
+    setInputText(text);
+  }
+
   const changeSetLang=()=>{
     const inputLang = langSelectInput;
     const outputLang = langSelectOut;
+    const inputTextTemp = inputText;
     setLangSelectInput(outputLang);
     setLangSelectOut(inputLang);
+    setInputText(myState.translationsText);
+    myState.translationsText = inputTextTemp;
   }
 
   return (
@@ -62,6 +74,8 @@ function Home() {
           <InputComponent
             langSelectInput={langSelectInput.value}
             langSelectOut={langSelectOut.value}
+            setText = {setText}
+            inputText={inputText}
           />
           <OutputComponent />
         </div>
